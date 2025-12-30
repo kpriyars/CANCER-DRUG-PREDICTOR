@@ -1,23 +1,19 @@
 import streamlit as st
-import pandas as pd
-from pycaret.regression import load_model, predict_model
-import numpy as np
+import pickle
+import os
 
-st.title("🧬 CANCER DRUG PREDICTOR")
+st.set_page_config(page_title="Cancer Drug Response Predictor", layout="wide")
 
-@st.cache_resource
-def load_brain():
-    return load_model('cancer_brain')
+st.title("🧬 Cancer Drug Response Predictor")
+st.write("Predicting IC50 values using gene expression data.")
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "cancer_brain.pkl")
 
 try:
-    model = load_brain()
-    st.success("This is Cancer Drug Predictor")
-    val = st.slider("Select Gene Expression", -3.0, 3.0, 0.0)
-
-    if st.button("Predict Response"):
-        data = pd.DataFrame(np.zeros((1, 10)), columns=[f"GENE_{i}" for i in range(10)])
-        data['GENE_1'] = val
-        pred = predict_model(model, data=data)
-        st.write(f"### Predicted IC50: {pred['prediction_label'][0]:.2f}")
+    with open(MODEL_PATH, "rb") as f:
+        model = pickle.load(f)
+    st.success("✅ Model loaded successfully")
 except Exception as e:
-    st.error(f"Error: {e}")
+    st.error(f"❌ Error loading model: {e}")
+
