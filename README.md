@@ -71,7 +71,7 @@ A **greedy sparse regression algorithm** used for feature selection and predicti
 
 ---
 
-## 💻 Technical Stack & Optimization
+## Technical Stack & Optimization
 
 | Layer | Technology |
 |------|-----------|
@@ -84,7 +84,7 @@ A **greedy sparse regression algorithm** used for feature selection and predicti
 
 ---
 
-## 🌐 Web Interface
+## Web Interface
 
 - Real-time IC50 prediction via **Streamlit**
 - Instant inference using a preloaded `.pkl` model
