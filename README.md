@@ -1,6 +1,6 @@
 <!-- PROJECT BANNER -->
 <p align="center">
-  <img src="assets/banner.png" alt="Cancer Drug Response Predictor Banner" width="100%">
+ <img src="https://media1.tenor.com/m/jDvF_mSFBKAAAAAC/dna-helix.gif" width=100%">
 </p>
 
 <h1 align="center">🧬 Cancer Drug Response Predictor (Genomics-ML)</h1>
