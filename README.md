@@ -11,7 +11,7 @@
 
 ---
 
-## 📌 Project Motivation
+## Project Motivation
 
 In modern oncology, **Precision Medicine** aims to match the *right drug* to the *right patient* using their **genetic signature**.
 
@@ -19,7 +19,7 @@ This project predicts **IC50 values** from **gene expression data**, enabling in
 
 ---
 
-## 🧪 Theoretical Background
+## Theoretical Background
 
 ### 🔬 What is IC50?
 
@@ -34,7 +34,7 @@ Predicting IC50 is critical for **treatment personalization** and **toxicity red
 
 ---
 
-## 🧬 Biological Input: Gene Expression
+## Biological Input: Gene Expression
 
 The model analyzes **mRNA expression levels**, represented as **Z-scores (-3 to +3)**:
 
@@ -45,7 +45,7 @@ The ML system learns which gene expression patterns **reduce IC50**, improving d
 
 ---
 
-## 🛠️ Machine Learning Architecture
+## Machine Learning Architecture
 
 ### 1️⃣ Data Synthesis
 
